@@ -1,69 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Mesin Produksi - Lini A</title>
+    <title>Laporan Inspeksi Kualitas_Shannaz Fairuz_23051430020</title>
 </head>
+
 <body>
- <!-- Semantic HTML -->
- <header>
-    <h1>Profil Mesin CNC-01</h1>
-        <hr>
- </header>
- <section>
-    <h2>Spesifikasi Teknis</h2>
-        <ul>
-            <li><strong>Merk:</strong> Yamazaki Mazak</li>
-            <li><strong>Kapasitas:</strong> 500 unit/hari</li>
-            <li><strong>Status:</strong> <span style="color: green;">Operasional</span></li>
-        </ul>
- </section>
- <h2>Jadwal Pemeliharaan</h2>
- <table border="1" cellpadding="10">
-    <thead>
-            <tr>
-                <th>Tanggal</th>
-                <th>Jenis Perawatan</th>
-                <th>Penanggung Jawab</th>
-                <th>Status</th> <!-- Latihan 1 -->
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>12 Jan 2024</td>
-                <td>Penggantian Oli</td>
-                <td>Teknisi A</td>
-                <td>Selesai</td>
-            </tr>
-            <tr>
-                <td>15 Feb 2024</td>
-                <td>Kalibrasi Presisi</td>
-                <td>Teknisi B</td>
-                <td>Pending</td>
-            </tr>
-        </tbody>
- </table>
-  <hr>
-    <h2>Input Data Harian</h2>
-    <form action="">
-        <label for="tanggal">Tanggal:</label><br>
-        <input type="date" id="tanggal" name="tanggal" required><br><br>
+    <header>
+        <h1>Laporan Inspeksi Kualitas</h1>
+        <h3>Dibuat oleh : Shannaz Fairuz (23051430020)</h3>
+    </header>
+    <main>
+        <section>
+            <form action="">
+                <!-- field id produk -->
+                <label for="id_produk">Id Produk :</label><br>
+                <input type="text" id="id_produk" name="Id Produk" placeholder="Masukkan id produk" required><br><br>
 
-        <label for="shift">Shift Kerja:</label><br>
-        <select id="shift" name="shift">
-            <option value="Pagi">Pagi</option>
-            <option value="Siang">Siang</option>
-            <option value="Malam">Malam</option>
-        </select><br><br>
+                <!-- field nama inspektur  -->
+                <label for="nama_inspektur">Nama Inspektur :</label><br>
+                <input type="text" id="nama_inspektur" name="nama_inspektur" placeholder="Masukkan nama inspektur"
+                    required><br><br>
 
-        <label for="jumlah">Jumlah Produksi:</label><br>
-        <!-- Latihan 2 -->
-        <input type="number" id="jumlah" name="jumlah" min="0" max="600" placeholder="Masukkan jumlah"><br><br>
-        <label for="catatan">Catatan:</label><br>
-        <textarea id="catatan" name="catatan"></textarea><br><br>
+                <!-- field jenis cacat -->
+                <label>Jenis Cacat :</label><br>
+                <!-- Radio opsi geometri -->
+                <input type="radio" id="geometri" name="status" value="geometri">
+                <label for="geometri">Geometri</label><br>
+                <!-- Radio opsi permukaan -->
+                <input type="radio" id="permukaan" name="status" value="permukaan">
+                <label for="permukaan">Permukaan</label><br>
+                <!-- Radio opsi fungsional -->
+                <input type="radio" id="fungsional" name="status" value="fungsional">
+                <label for="fungsional">Fungsional</label><br><br>
 
-        <button type="submit">Simpan Data</button>
-    </form>
+                <!-- field jumlah cacat -->
+                <label for="jumlah_cacat">Jumlah Produk Cacat(Unit) :</label><br>
+                <input type="number" id="jumlah_cacat" name="jumlah_cacat" min="0"
+                    placeholder="Masukkan jumlah produk cacat"><br><br>
+
+                <!-- field foto produk -->
+                <label for="foto_produk">Upload Foto Produk :</label><br>
+                <input type="file" id="foto_produk" name="foto_produk"
+                    placeholder="Upload foto produk dari perangkat Anda">
+                <br><br>
+                <button type="submit">Simpan Data</button>
+            </form>
+        </section>
+    </main>
 </body>
+
 </html>
