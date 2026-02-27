@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gudang Bahan Baku</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+    <!-- BAGIAN ATAS: JUDUL -->
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center mb-4">Gudang Bahan Baku</h2>
+        </div>
+    </div>
+
+    <!-- BAGIAN UTAMA: KIRI 4 KOLOM & KANAN 8 KOLOM -->
+    <div class="row">
+
+        <!-- KIRI (4 KOLOM) -->
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header bg-success text-white">
+                    Form Stok Masuk
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">Nama Barang</label>
+                            <input type="text" class="form-control" placeholder="Masukkan nama barang">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Qty</label>
+                            <input type="number" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Supplier</label>
+                            <input type="text" class="form-control" placeholder="Masukkan supplier">
+                        </div>
+
+                        <button type="submit" class="btn btn-success w-100">
+                            Simpan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- KANAN (8 KOLOM) -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary text-white">
+                    Tabel Stok Saat Ini
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>No</th>
+                                <th>Nama Barang</th>
+                                <th>Qty</th>
+                                <th>Supplier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Baja Ringan</td>
+                                <td>120</td>
+                                <td>PT Sumber Baja</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Aluminium Sheet</td>
+                                <td>30</td>
+                                <td>PT Metal Indo</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Baut M10</td>
+                                <td>5</td>
+                                <td>CV Teknik Jaya</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
