@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Biaya Produksi</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+<header class="bg-success text-white py-4 shadow">
+<div class="container text-center">
+<h1 class="fw-bold">Kalkulator Biaya Produksi</h1>
+<p class="mb-0">Program Perhitungan Biaya Produksi per Unit</p>
+</div>
+</header>
+
+<main class="container mt-5">
+
+<div class="card shadow">
+<div class="card-body">
+
+<h3 class="text-center mb-4">Input Data Produksi</h3>
+
+<form id="formProduksi">
+
+<div class="mb-3">
+<label class="form-label">Biaya Bahan Baku</label>
+<input type="number" id="bahanBaku" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Biaya Tenaga Kerja</label>
+<input type="number" id="tenagaKerja" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Biaya Overhead</label>
+<input type="number" id="overhead" class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Jumlah Produksi</label>
+<input type="number" id="jumlahProduksi" class="form-control" required>
+</div>
+
+<button class="btn btn-success w-100">
+Hitung Biaya Produksi
+</button>
+
+</form>
+
+</div>
+</div>
+
+<div class="card shadow mt-4">
+<div class="card-body text-center">
+
+<h4>Hasil Perhitungan</h4>
+
+<p id="hasilOutput" class="fw-bold"></p>
+
+</div>
+</div>
+
+</main>
+
+<script src="Kalkulator_Biaya_produksi.js"></script>
+
+</body>
+</html>
