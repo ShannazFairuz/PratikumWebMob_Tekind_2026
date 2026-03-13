@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Simulasi Job Shop</title>
+    <link rel="stylesheet" href="Miniproyek.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Simulasi Antrian Job Shop</h1>
+      <p class="subtitle">Sistem Proses Mesin Produksi</p>
+
+      <button onclick="jalankanSimulasi()">Mulai Simulasi</button>
+
+      <div class="card">
+        <h3>Daftar Antrian</h3>
+        <ul id="daftarAntrian"></ul>
+      </div>
+
+      <div class="card">
+        <h3>Status Mesin</h3>
+        <p id="statusMesin">Mesin siap...</p>
+
+        <div class="progressBox">
+          <div id="progressBar"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Log Proses</h3>
+        <div id="logProses"></div>
+      </div>
+    </div>
+
+    <script src="Miniproyek.js"></script>
+  </body>
+</html>

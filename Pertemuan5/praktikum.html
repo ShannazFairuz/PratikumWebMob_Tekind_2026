@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="praktikum.css" />
+    <title>Kalkulator Energi Listrik Mesin</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Kalkulator Energi Listrik Mesin</h1>
+        <p>Dibuat oleh: <b>Shannaz Fairuz</b></p>
+      </header>
+
+      <section>
+        <h2>Perhitungan Daya Mesin (Langkah 1)</h2>
+
+        <div class="form-group">
+          <label>Tegangan Mesin (Volt)</label>
+          <input type="number" id="teganganInput" placeholder="Contoh: 220" />
+        </div>
+
+        <div class="form-group">
+          <label>Arus Mesin (Ampere)</label>
+          <input type="number" id="arusInput" placeholder="Contoh: 10" />
+        </div>
+
+        <button onclick="prosesHitung()">Hitung Daya</button>
+
+        <h3>Hasil Perhitungan:</h3>
+        <p id="hasilDaya" style="font-weight: bold; color: blue">
+          Belum ada perhitungan
+        </p>
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Langkah 2, 3, & 4</h2>
+        <p>
+          Hasil untuk Daftar Cacat, Data Mesin, dan Stok Gudang dapat dilihat
+          pada <b>Console Browser (Tekan F12)</b> sesuai instruksi praktikum.
+        </p>
+      </section>
+
+      <footer>
+        <p>© 2026 - Shannaz Fairuz</p>
+      </footer>
+    </div>
+
+    <script src="praktikum.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe259, #ffa751);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* kotak utama dibuat beda */
+.container {
+  background: #ffffff;
+  padding: 35px;
+  width: 370px;
+  border-radius: 14px;
+  text-align: center;
+  border-top: 8px solid #ff7a18;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin-bottom: 5px;
+  color: #ff7a18;
+}
+
+p {
+  color: #666;
+}
+
+.form-box {
+  margin-top: 20px;
+}
+
+/* input diperbesar */
+input {
+  width: 90%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #ff7a18;
+}
+
+/* tombol dibuat oval */
+button {
+  margin-top: 18px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #ff7a18;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #ff5200;
+}
+
+/* kotak hasil dibuat beda */
+.hasil {
+  margin-top: 25px;
+  background: #fff4e6;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px dashed #ff7a18;
+}
