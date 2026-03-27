@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+
+  /* background cerah orange */
+  background: linear-gradient(135deg, #ffd6a5, #ff9f43);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  width: 420px;
+  text-align: center;
+
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+h1 {
+  margin-bottom: 5px;
+  color: #ff7a00;
+}
+
+.subtitle {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* tombol */
+button {
+  background: linear-gradient(45deg, #ff7a00, #ffb347);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* card */
+.card {
+  background: #fff5ec;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 15px;
+
+  border-left: 6px solid #ff7a00;
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #ff7a00;
+}
+
+/* daftar antrian */
+#daftarAntrian {
+  padding-left: 20px;
+}
+
+#daftarAntrian li {
+  margin: 5px 0;
+}
+
+/* progress bar */
+.progressBox {
+  width: 100%;
+  height: 20px;
+  background: #ffe0c7;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ff7a00, #ffa94d);
+  transition: width 0.3s;
+}
+
+/* log proses */
+#logProses {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.logItem {
+  background: #fff0e0;
+  padding: 8px;
+  margin-bottom: 6px;
+  border-radius: 6px;
+  font-size: 14px;
+
+  border-left: 4px solid #ff7a00;
+}
