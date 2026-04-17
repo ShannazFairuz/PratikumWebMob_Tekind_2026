@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistem Pelaporan Insiden ERP</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Miniproyek.css" />
+  </head>
+  <body class="container mt-5">
+    <div
+      class="d-flex justify-content-between align-items-center mb-4 border-bottom pb-3"
+    >
+      <div>
+        <h2 class="text-dark fw-bold mb-0"> Dashboard Insiden Produksi</h2>
+        <span class="badge bg-secondary mt-2"
+          >Penanggung Jawab: Shannaz Fairuz</span
+        >
+      </div>
+      <div>
+        <button id="btnLoadInsiden" class="btn btn-outline-secondary me-2">
+          Muat Data Server
+        </button>
+        <button id="btnTambahInsiden" class="btn btn-corporate">
+          Buat Tiket Baru
+        </button>
+      </div>
+    </div>
+
+    <div class="row mb-4 bg-white p-3 shadow-sm rounded-3 mx-0 border">
+      <div class="col-md-8">
+        <label class="form-label fw-bold text-secondary small"
+          >Pencarian Kata Kunci</label
+        >
+        <input
+          type="text"
+          id="inputSearch"
+          class="form-control"
+          placeholder="Cari berdasarkan judul atau deskripsi tiket..."
+        />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label fw-bold text-secondary small"
+          >Filter Lokasi</label
+        >
+        <select id="selectFilter" class="form-select">
+          <option value="all">Semua Line Produksi</option>
+          <option value="lineA">Line Produksi A (ID Ganjil)</option>
+          <option value="lineB">Line Produksi B (ID Genap)</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="loading" class="text-center d-none my-5">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p class="text-muted mt-2 fw-semibold">Memproses data...</p>
+    </div>
+
+    <div class="row" id="containerInsiden"></div>
+
+    <script src="Miniproyek.js"></script>
+  </body>
+</html>
