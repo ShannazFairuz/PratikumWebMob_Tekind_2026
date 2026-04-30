@@ -1,29 +1,29 @@
-function KartuMesin(props) {
-  const namaMesin = props.nama;
-  const status = props.status;
-  const produksi = props.produksi;
+import { useState } from "react";
+
+function KartuMesin({ nama, status, produksi }) {
+  const [statusLokal, setStatusLokal] = useState(status);
 
   let badgeColor = "bg-secondary";
 
-  if (status === "Running") {
+  if (statusLokal === "Running") {
     badgeColor = "bg-success";
   }
 
-  if (status === "Stop") {
+  if (statusLokal === "Stop") {
     badgeColor = "bg-danger";
   }
 
-  if (status === "Maintenance") {
+  if (statusLokal === "Maintenance") {
     badgeColor = "bg-warning";
   }
 
   return (
     <div className="card shadow-sm p-3 mb-3">
       <div className="card-body">
-        <h5>{namaMesin}</h5>
+        <h5>{nama}</h5>
 
         <span className={`badge ${badgeColor}`}>
-          {status}
+          {statusLokal}
         </span>
 
         <hr />
@@ -31,6 +31,16 @@ function KartuMesin(props) {
         <p>
           Produksi: <b>{produksi}</b> Unit
         </p>
+
+        <select
+          className="form-select mt-2"
+          value={statusLokal}
+          onChange={(e) => setStatusLokal(e.target.value)}
+        >
+          <option value="Running">Running</option>
+          <option value="Stop">Stop</option>
+          <option value="Maintenance">Maintenance</option>
+        </select>
       </div>
     </div>
   );

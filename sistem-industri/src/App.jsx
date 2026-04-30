@@ -1,6 +1,9 @@
 import KartuMesin from "./Komponen/KartuMesin";
 import KartuMesin2 from "./Komponen/KartuMesin2";
 import KartuKaryawan from "./Komponen/KartuKaryawan";
+import CounterProduksi from "./Komponen/CounterProduksi.jsx";
+import JamDigital from "./Komponen/JamDigital"; 
+import KalkulatorOEE from "./Komponen/KalkulatorOEE";
 
 function App() {
   return (
@@ -8,6 +11,10 @@ function App() {
       <h5>Nama: Shannaz Fairuz</h5>
       <h5>NIM: 23051430020</h5>
       <h1>Monitoring Produksi</h1>
+      
+      <JamDigital />
+      <CounterProduksi />
+      <KalkulatorOEE />
 
       <h2>Data Mesin</h2>
 
