@@ -1,51 +1,81 @@
-import KartuMesin from "./Komponen/KartuMesin";
-import KartuMesin2 from "./Komponen/KartuMesin2";
-import KartuKaryawan from "./Komponen/KartuKaryawan";
-import CounterProduksi from "./Komponen/CounterProduksi.jsx";
-import JamDigital from "./Komponen/JamDigital"; 
-import KalkulatorOEE from "./Komponen/KalkulatorOEE";
+import { Routes, Route, Link } from "react-router-dom";
+
+import Dashboard from "./Halaman/Dashboard";
+import Inventori from "./Halaman/Inventori";
+import DetailInventori from "./Halaman/DetailInventori";
+import LaporanKualitas from "./Halaman/LaporanKualitas";
+import NotFound from "./Halaman/NotFound";
+
+function Navbar() {
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+
+      <div className="container">
+
+        <Link className="navbar-brand" to="/">
+          Sistem Pabrik
+        </Link>
+
+        <div className="navbar-nav">
+
+          <Link className="nav-link" to="/">
+            Dashboard
+          </Link>
+
+          <Link className="nav-link" to="/inventori">
+            Inventori
+          </Link>
+
+          <Link
+            className="nav-link"
+            to="/laporan-kualitas"
+          >
+            Laporan Kualitas
+          </Link>
+
+        </div>
+
+      </div>
+
+    </nav>
+  );
+}
 
 function App() {
   return (
-    <div className="container mt-4">
-      <h5>Nama: Shannaz Fairuz</h5>
-      <h5>NIM: 23051430020</h5>
-      <h1>Monitoring Produksi</h1>
-      
-      <JamDigital />
-      <CounterProduksi />
-      <KalkulatorOEE />
+    <div>
 
-      <h2>Data Mesin</h2>
+      <Navbar />
 
-      <KartuMesin nama="CNC-01" status="Running" produksi={150} />
+      <Routes>
 
-      {/* Ini latihan 2 (default props) */}
-      <KartuMesin2 nama="CNC-02" status="Maintenance" />
+        <Route
+          path="/"
+          element={<Dashboard />}
+        />
 
-      <KartuMesin nama="Press-01" status="Stop" produksi={85} />
+        <Route
+          path="/inventori"
+          element={<Inventori />}
+        />
 
-      <hr />
+        <Route
+          path="/inventori/:id"
+          element={<DetailInventori />}
+        />
 
-      <h2>Data Karyawan</h2>
+        <Route
+          path="/laporan-kualitas"
+          element={<LaporanKualitas />}
+        />
 
-      <KartuKaryawan
-        nama="Jonathan"
-        jabatan="Manager"
-        bagian="Produksi"
-      />
+        <Route
+          path="*"
+          element={<NotFound />}
+        />
 
-      <KartuKaryawan
-        nama="Flauren"
-        jabatan="Operator"
-        bagian="Lini A"
-      />
+      </Routes>
 
-      <KartuKaryawan
-        nama="David"
-        jabatan="QC"
-        bagian="Quality"
-      />
     </div>
   );
 }
